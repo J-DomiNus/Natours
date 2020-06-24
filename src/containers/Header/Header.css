@@ -1,0 +1,19 @@
+
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,
+        #7ed56f57,
+        #28b48557),
+        url(hero.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0,100% 0,100% 80vh,0 100%);
+    position: relative;
+}
+
+
+
+
+

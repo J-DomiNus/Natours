@@ -10,71 +10,30 @@ Dark green: #28b485
 /*UNIVERSAL SELECTOR TO NORMALIZE DEFAULT
 CSS RENDER IN EVERY BROWSER-----------------------*/
 
-* {
+*,
+*::after,
+*::before {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 /*DEFAULT CSS-------------------------------------*/
 
+html {
+  font-size: 62.5%;
+  /*default browser font-size=16px
+  62.5% of 16px = 10px*/
+}
+
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.7;
   color: #777;
-  padding: 30px;
+  padding: 3.0rem;
+
+  box-sizing: border-box;
 }
 
-/*HEADER------------------------------------------*/
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(
-      to right bottom,
-      #7ed56f59,
-      #28b48559),
-      url(./img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0,100% 0,100% 80vh,0 100%);
-  position: relative;
-}
-
-.logo-box {
-  position: absolute;
-  top: 40px;
-  left: 40px;
-}
-
-.logo {
-  height: 35px;
-}
-
-.heading-box {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
-
-.main-heading {
-  color: #fff;
-  text-transform: uppercase;
-
-}
-
-.large-heading {
-  display: block;
-  font-size: 60px;
-  font-weight: 300;
-  letter-spacing: 35px;
-}
-
-.small-heading {
-  display: block;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 17.4px;
-}
