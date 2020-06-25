@@ -1,0 +1,33 @@
+.heading-primary {
+    color:$color-headings-buttons;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+    /*SOLVES A SMALL ONLOAD ANIMATION ISSUE---*/
+    backface-visibility: hidden;
+
+    &--main {
+        display: block;
+        font-size: 6.0rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+    
+        animation-name: moveInLeft;
+        animation-duration: 3s;
+        animation-timing-function: ease-out;
+    }
+    
+    &--sub {
+        display: block;
+        font-size: 2.0rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+    
+        animation-name: moveInRight;
+        animation-duration: 2.5s;
+        animation-timing-function: ease-out;
+        animation-delay: .75s;
+        animation-fill-mode: backwards;
+    }
+}
+
+
