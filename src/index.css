@@ -49,11 +49,7 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3.0rem;
-  text-align: center;
   box-sizing: border-box; }
-
-.App {
-  text-align: center; }
 
 .heading-primary {
   color: #fff;
@@ -80,6 +76,22 @@ body {
     animation-delay: .75s;
     animation-fill-mode: backwards; }
 
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 2px; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -88,6 +100,7 @@ body {
   border-radius: 9.0rem;
   background-color: #fff;
   color: #777;
+  text-align: center;
   /*position for the AFTER ANIMATION*/
   position: relative;
   /*transition to 'all' children 
@@ -129,6 +142,36 @@ body {
   animation-delay: 1.4s;
   animation-fill-mode: backwards; }
 
+.row {
+  width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .row [class^='col-'] {
+    float: left; }
+    .row [class^='col-']:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
+/*
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;
+*/
 /*--------------------HEADER----------------------*/
 .header {
   height: 95vh;
@@ -136,6 +179,7 @@ body {
   background-size: cover;
   background-position: top;
   position: relative;
+  text-align: center;
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
   .header__logo-box {
     position: absolute;
@@ -154,6 +198,11 @@ body {
     top: 48%;
     left: 50%;
     transform: translate(-50%, -50%); }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh; }
 
 /*UNIVERSAL SELECTOR TO NORMALIZE DEFAULT
 CSS RENDER IN EVERY BROWSER-----------------------*/
