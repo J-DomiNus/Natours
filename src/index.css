@@ -1,30 +1,46 @@
-/*
-COLORS:
+/*ONLOAD ANIMATION----------------------------*/
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-8rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 
-*/
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(6rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 
-/*UNIVERSAL SELECTOR TO NORMALIZE DEFAULT
-CSS RENDER IN EVERY BROWSER-----------------------*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 *,
 *::after,
 *::before {
   margin: 0px;
   padding: 0px;
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 /*DEFAULT CSS-------------------------------------*/
-
 html {
   font-size: 62.5%;
   /*default browser font-size=16px
-  62.5% of 16px = 10px*/
-}
+  62.5% of 16px = 10px*/ }
 
 body {
   font-family: 'Lato', sans-serif;
@@ -33,7 +49,111 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3.0rem;
+  text-align: center;
+  box-sizing: border-box; }
 
-  box-sizing: border-box;
-}
+.App {
+  text-align: center; }
 
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  /*SOLVES A SMALL ONLOAD ANIMATION ISSUE---*/
+  backface-visibility: hidden; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6.0rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2.0rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation-name: moveInRight;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-out;
+    animation-delay: .75s;
+    animation-fill-mode: backwards; }
+
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4.0rem;
+  display: inline-block;
+  border-radius: 9.0rem;
+  background-color: #fff;
+  color: #777;
+  /*position for the AFTER ANIMATION*/
+  position: relative;
+  /*transition to 'all' children 
+        elements(hover and active)*/
+  transition: all .2s; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4); }
+
+.btn--white {
+  background-color: #fff; }
+  .btn--white::after {
+    background-color: #fff; }
+
+.btn::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 9.0rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 1s; }
+
+.btn--animation {
+  animation: moveInBottom;
+  animation-duration: 1.8s;
+  animation-timing-function: ease-out;
+  animation-delay: 1.4s;
+  animation-fill-mode: backwards; }
+
+/*--------------------HEADER----------------------*/
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.4), rgba(40, 180, 133, 0.4)), url("./assets/img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 4.0rem;
+    left: 4.0rem; }
+  .header__logo {
+    height: 3.5rem;
+    cursor: pointer;
+    animation: fadeIn;
+    animation-duration: 2s; }
+    .header__logo:hover {
+      opacity: 0.7;
+      transition: 0.1s; }
+  .header__text-box {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+/*UNIVERSAL SELECTOR TO NORMALIZE DEFAULT
+CSS RENDER IN EVERY BROWSER-----------------------*/
