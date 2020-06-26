@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../index.css'
 
-const button = () => {
+const buttonHeadings = () => {
     return (
         <div>
             <a 
@@ -14,4 +14,4 @@ const button = () => {
     )
 }
 
-export default button;
+export default buttonHeadings;
