@@ -1,5 +1,4 @@
 import React from 'react'
-import '../index.css'
 import ButtonText from '../components/about/ButtonText'
 import Img_1 from "../assets/img/nat-1-large.jpg";
 import Img_2 from "../assets/img/nat-2-large.jpg";
@@ -34,7 +33,6 @@ const about = () => {
                 </div>
             </div>
         </section>
-            
     )
 }
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import "../index.css"
 import Logo from '../assets/img/logo-white.png'
 import ButtonHeadings from '../components/header/ButtonHeadings'
 

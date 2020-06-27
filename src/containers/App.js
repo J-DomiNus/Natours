@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../index.css';
 import Header from './Header'
 import About from './About'
 import Features from './Features'
