@@ -6,8 +6,6 @@
         padding: 1.5rem 4.0rem;
         display: inline-block;
         border-radius: 9.0rem;
-        background-color: $color-headings-buttons;
-        color: #777;
         text-align: center;
         /*position for the AFTER ANIMATION*/
         position: relative;
@@ -33,9 +31,19 @@
 
     &--white {
         background-color: $color-headings-buttons;
+        color: #777;
 
         &::after {
         background-color: $color-headings-buttons;
+        }
+    }
+
+    &--green {
+        background-color: $color-primary;
+        color: $color-headings-buttons;
+
+        &::after {
+        background-color: $color-primary;
         }
     }
 
@@ -60,5 +68,4 @@
         animation-fill-mode: backwards;
     }
 }
-
 

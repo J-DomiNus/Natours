@@ -26,9 +26,9 @@ const about = () => {
                 </div>
                 <div className='col-1-of-2'>
                     <div className="composition">
-                        <img src={Img_1} alt="Photo 1" className="composition__photo composition__photo--p1"/>
-                        <img src={Img_2} alt="Photo 2" className="composition__photo composition__photo--p2"/>
-                        <img src={Img_3} alt="Photo 3" className="composition__photo composition__photo--p3"/>
+                        <img src={Img_1} alt="Photo1" className="composition__photo composition__photo--p1"/>
+                        <img src={Img_2} alt="Photo2" className="composition__photo composition__photo--p2"/>
+                        <img src={Img_3} alt="Photo3" className="composition__photo composition__photo--p3"/>
                     </div>
                 </div>
             </div>
