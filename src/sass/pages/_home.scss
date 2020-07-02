@@ -29,3 +29,16 @@
     padding: 30rem 0 20rem 0;
     margin-top: -20vh;
 }
+
+.section-stories {
+    padding: 15rem 0;
+    position: relative;
+}
+
+.section-booking {
+    padding: 15rem 0;
+    background-image: linear-gradient(
+        to right bottom, $color-primary-light, $color-primary-dark);
+}
+
+

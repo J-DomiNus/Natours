@@ -1,6 +1,6 @@
 import React from 'react'
 
-const features = () => {
+const footer = () => {
     return(
         <section>
             <div className='row'>
@@ -15,4 +15,4 @@ const features = () => {
     )
 }
 
-export default features;
+export default footer;

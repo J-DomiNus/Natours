@@ -21,7 +21,7 @@
     box-shadow: 0 1.5rem 4rem rgba(black, .15);
 
     &--front {
-        background-color: $color-headings-buttons;
+        background-color: $color-white;
     }
 
     &--back {
@@ -101,7 +101,7 @@
         font-size: 2.8rem;
         font-weight: 300;
         text-transform: uppercase;
-        color: $color-headings-buttons;
+        color: $color-white;
         position: absolute;
         text-align: right;
         top: 12rem;
@@ -168,7 +168,7 @@
     &__price-box {
         text-align: center;
         margin-bottom: 8rem;
-        color: $color-headings-buttons;
+        color: $color-white;
     }
 
     &__price-only {

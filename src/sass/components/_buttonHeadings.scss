@@ -1,5 +1,6 @@
 .btn {
-    &:link,
+    &, //aplies to the button '.btn'
+    &:link,//link and visited aplies to the anchor link 'a'
     &:visited {
         text-transform: uppercase;
         text-decoration: none;
@@ -12,6 +13,10 @@
         /*transition to 'all' children 
         elements(hover and active)*/
         transition: all .2s;
+
+        //change for the <button> element
+        border: none;
+        cursor: pointer;
     }
 
     &:hover {
@@ -24,23 +29,24 @@
         }
     }
 
-    &:active {
+    &:active,
+    &:focus {
         transform: translateY(-1px);
         box-shadow: 0 5px 10px rgba(0,0,0,.4);
     }
 
     &--white {
-        background-color: $color-headings-buttons;
+        background-color: $color-white;
         color: #777;
 
         &::after {
-        background-color: $color-headings-buttons;
+        background-color: $color-white;
         }
     }
 
     &--green {
         background-color: $color-primary;
-        color: $color-headings-buttons;
+        color: $color-white;
 
         &::after {
         background-color: $color-primary;
