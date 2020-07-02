@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+import Navigation from './Navigation'
 import Header from './Header'
 import About from './About'
 import Features from './Features'
@@ -11,6 +13,7 @@ class App extends Component {
   render () {
     return (
       <div className="App">
+        <Navigation />
         <Header />
         <main>
           <About />
@@ -18,9 +21,8 @@ class App extends Component {
           <Tours />
           <Stories />
           <Booking />
-          <Footer />
         </main>
-        
+        <Footer />
       </div>
     );
   }

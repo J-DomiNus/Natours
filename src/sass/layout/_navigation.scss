@@ -1,0 +1,81 @@
+.navigation {
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        background-color: $color-white;
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 4.5rem;
+        right: 5.5rem;
+        z-index: 2000;
+    }
+
+    &__background {
+        height: 4.5rem;
+        width: 5.5rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        background-image: radial-gradient($color-primary-light,$color-primary-dark);
+        z-index: 1000;
+        box-shadow: 0 1rem 3rem rgba(black, .1);
+
+        //transform: scale(80);
+    }
+
+    &__nav {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1500;
+        text-align: center;
+    }
+
+    &__list {
+        @include center-element;
+        list-style: none;
+    }
+
+    &__item {
+        margin: 1rem;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            display: inline-block;
+            text-decoration: none;
+            padding: .5rem 1.5rem;
+            color: $color-white;
+            font-weight: 300;
+            font-size: 3rem;
+            text-transform: uppercase;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+            background-size: 240%;
+            transition: all .4s;
+
+            span {
+                margin-right: 1.5rem;
+
+            }
+        }
+
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: $color-primary;
+            //box-shadow: .5rem .5rem rgba($color-primary, .4);
+            border-radius: 3px;
+            //transform: translateX(1rem);
+        }
+    }
+        
+}
