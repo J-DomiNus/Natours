@@ -8,6 +8,7 @@ import Tours from './Tours'
 import Stories from './Stories'
 import Booking from './Booking'
 import Footer from './Footer'
+import Popup from './PopUp'
 
 class App extends Component {
   render () {
@@ -23,6 +24,7 @@ class App extends Component {
           <Booking />
         </main>
         <Footer />
+        <Popup />
       </div>
     );
   }

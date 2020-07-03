@@ -3,8 +3,10 @@ import React from 'react';
 const navigation = () => {
     return (
         <div className="navigation">
-            <input type="text" className="navigation__checkbox" id="navi-toggle"/>
-            <label for="navi-toggle" className="navigation__button">Menu</label>
+            <input type='checkbox' className="navigation__checkbox" id="navi-toggle"/>
+            <label for="navi-toggle" className="navigation__button">
+                <span className='navigation__icon'>&nbsp;</span>
+            </label>
             <div className="navigation__background">&nbsp;</div>
             <nav className="navigation__nav">
                 <ul className="navigation__list">
