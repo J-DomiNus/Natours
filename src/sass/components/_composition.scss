@@ -10,20 +10,37 @@
         outline-offset: 1.8rem;
         z-index: 1;
 
+        @include respond(tablet-portrait) { 
+            width: 45%;
+        }
+
         &--p1 {
             left: 2rem;
             top: -2rem;
-    
+
+    @include respond(tablet-portrait) { 
+                left: 0rem;
+                top: 0rem;
+            }
         }
         &--p2 {
             right: 0;
             top: 4rem;
             
+            @include respond(tablet-portrait) { 
+                left: 55%;
+                top: 0rem;
+            }
         }
         &--p3 {
             left: 20%;
             top: 12rem;
             
+            @include respond(tablet-portrait) { 
+                left: 27.5%;
+                top: -3rem;
+                width: 47%;
+            }
         }
 
         &:hover {

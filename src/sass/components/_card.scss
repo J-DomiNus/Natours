@@ -181,6 +181,54 @@
         font-weight: 100;
     }
 
+    
+    @include respond(tablet-portrait) { 
+        height: auto;
+        
+        &__side {
+            position: relative;
+            height: auto;
+
+            &--back {
+                transform: rotateY(0deg);
+                height: 25rem;
+                position: relative;
+                top: -3.5rem;
+                width: 100%;
+                -webkit-clip-path: polygon(0 15%,100% 0,100% 100%,0 100%);
+                clip-path: polygon(0 15%,100% 0,100% 100%,0 100%);//0px 0px, 100% 0px, 99.71% 41.54vh, 0px 100
+            }   
+        }
+        &:hover &__side--front {
+            transform: rotateY(0deg);
+        }
+    
+        &:hover &__side--back {
+            transform: rotateY(0deg);
+        }
+
+        &__cta {
+            position: absolute;
+            width: 90%;
+            text-align: center;
+        }
+    
+        &__price-box {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: $color-white;
+        }
+    
+        &__price-only {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            margin-top: 1rem;
+        }
+    
+        &__price-value {
+            font-size: 5rem;
+            font-weight: 100;
+        }
+    }
+    
 }
-
-

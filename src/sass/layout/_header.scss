@@ -6,13 +6,30 @@
         to right bottom, 
         rgba($color-primary-light,0.4),
         rgba($color-primary-dark,0.4)),
-        url('../img/hero.jpg');
+        url('../img/hero-small.jpg');
     background-size: cover;
     background-position: top;
     position: relative;
     text-align: center;
 
     clip-path: polygon(0 0,100% 0,100% 80vh,0 100%);
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em), //192dpi = DPR:2 = 2x
+            (min-width: 125em) { 
+        background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-secondary-light,0.4),
+        rgba($color-secondary-dark,0.4)),
+        url('../img/hero.jpg');
+    }
+
+    @include respond(tablet-portrait) { 
+        clip-path: polygon(0 0,100% 0,100% 80vh,0 93%);
+    }
+
+    @include respond(phone) {
+        clip-path: polygon(0 0,100% 0,100% 75vh,0 90%);
+    }
     
     &__logo-box {
         position: absolute;
@@ -33,6 +50,13 @@
     
     &__text-box {
         @include center-element;
+
+        @include respond(phone) {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 }
 

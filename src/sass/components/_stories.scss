@@ -13,6 +13,12 @@
         transform: skewX(12deg);
     }
 
+    @include respond(tablet-portrait) { 
+        padding: 4rem;
+        padding-left: 9rem;
+        width: 100%;
+    }
+
     &__shape {
         width: 15rem;
         height: 15rem;
@@ -26,6 +32,11 @@
         //turns the element into a circle
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
+
+        @include respond(tablet-portrait) { 
+            width: 10rem;
+            height: 10rem;
+        }
     }
 
     &__img {
@@ -36,6 +47,10 @@
 
     &__text {
         transform: skewX(12deg);
+
+        @include respond(tablet-portrait) { 
+            transform: skewX(0);
+        }
     }
 
     &__caption {

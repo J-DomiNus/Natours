@@ -1,9 +1,18 @@
 .row {
-    width: $grid-width;
+    max-width: $grid-width;
     margin: 0 auto;//centers block elements inside other block elements
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+
+        @include respond(tablet-portrait) {
+            margin-bottom: $gutter-vertical-small;
+        }
+    }
+
+    @include respond(tablet-portrait) {
+        max-width: 50rem;
+        padding: 0 2.5rem;
     }
 
     @include clearfix;
@@ -13,6 +22,15 @@
 
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+
+            @include respond(tablet-portrait) {
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }
+        }
+
+        @include respond(tablet-portrait) {
+            width: 100% !important;
         }
     }
 

@@ -1,11 +1,16 @@
 import React from 'react';
-import Logo from '../assets/img/logo-green-2x.png';
+import LogoLarge from '../assets/img/logo-green-1x.png';
+import LogoSmall from '../assets/img/logo-green-small-2x.png';
 
 const footer = () => {
     return(
         <footer className='footer'>
             <div className='footer__logo-box'>
-                <img src={Logo} alt='Logo' className='footer__logo'/>
+                <img 
+                srcSet= {` ${LogoSmall} 2x, ${LogoLarge} 1x` } 
+                media="(max-width: 37.5em)" 
+                alt='Logo' 
+                className='footer__logo'/>
             </div>
             <div className='row'>
                 <div className='col-1-of-2'>

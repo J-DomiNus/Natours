@@ -28,6 +28,10 @@
     &__left {
         width: 33.333%;
         display: table-cell;
+
+        @include respond(tablet-landscape) {
+            display: block;
+        }
     }
 
     &__right {
@@ -35,11 +39,22 @@
         display: table-cell;
         vertical-align: middle;
         padding: 4rem;
+
+        @include respond(tablet-landscape) {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }        
     }
 
+
     &__img {
-        display: block;
+        display: table-cell;
         width: 100%;
+        
+        @include respond(tablet-landscape) {
+            display: none;
+        }
     }
 
     &__text {
@@ -50,6 +65,10 @@
         column-rule: 1px solid $color-grey-light-2;
 
         hyphens: auto;
+
+        @include respond(tablet-landscape) {
+            column-count: 1;
+        }
     }
 
     //Open popup---------------------------------------
@@ -80,4 +99,3 @@
         }
     }
 }
-

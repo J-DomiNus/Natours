@@ -15,6 +15,15 @@
         z-index: 2000;
         text-align: center;
         cursor: pointer;
+
+        @include respond(tablet-portrait) { 
+            top: 3.5rem;
+            right: 4.3rem;
+        }
+        @include respond(phone) { 
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
 
@@ -29,6 +38,15 @@
         z-index: 1000;
         box-shadow: 0 1rem 3rem rgba(black, .1);
         transition: transform .8s cubic-bezier(0.86,0,0.07,1);;
+        
+        @include respond(tablet-portrait) { 
+            top: 4.8rem;
+            right: 5rem;
+        }
+        @include respond(phone) { 
+            top: 4rem;
+            right: 3.5rem;
+        }
     }
 
     &__nav {
